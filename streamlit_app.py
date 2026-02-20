@@ -83,15 +83,15 @@ if st.button("Recommend games"):
     else:
         st.subheader("Top Recommendations")
 
-        # Show a clean results table
         st.dataframe(
             recs[["name", "platform", "genre", "year_of_release", "critic_score", "global_sales", "score"]],
             use_container_width=True
         )
+
+        st.caption("Score uses normalized critic score and normalized global sales, weighted by your preferences.")
+
 with st.expander("📌 How ranking works (SQL-inspired)"):
     st.markdown("""
-
-
 This app ranks games using **two signals**:
 
 - **Critic Score** (quality)
@@ -100,5 +100,3 @@ This app ranks games using **two signals**:
 Both are normalized to keep the weighting fair, then combined into a single score.
 Duplicates are removed so one title doesn’t appear multiple times.
 """)
-        st.caption("Score uses normalized critic score and normalized global sales, weighted by your preferences.")
-
