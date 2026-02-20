@@ -55,8 +55,8 @@ st.write("Portfolio demo: filters + ranking using critic score and global sales.
 
 st.header("Quick Preferences")
 
-platform_options = ["Any"] + sorted(df["platform"].dropna().unique().tolist())
-genre_options = ["Any"] + sorted(df["genre"].dropna().unique().tolist())
+allowed_platforms = ["Any", "Wii", "X360", "PS4", "PC"]
+platform = st.selectbox("Platform", allowed_platforms)
 
 platform = st.selectbox("Platform", platform_options)
 genre = st.selectbox("Genre", genre_options)
@@ -78,3 +78,4 @@ if st.button("Recommend games"):
             recs[["name", "platform", "genre", "year_of_release", "critic_score", "global_sales", "score"]],
             use_container_width=True
         )
+
