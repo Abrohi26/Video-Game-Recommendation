@@ -88,5 +88,17 @@ if st.button("Recommend games"):
             recs[["name", "platform", "genre", "year_of_release", "critic_score", "global_sales", "score"]],
             use_container_width=True
         )
+with st.expander("📌 How ranking works (SQL-inspired)"):
+    st.markdown("""
 
+
+This app ranks games using **two signals**:
+
+- **Critic Score** (quality)
+- **Global Sales** (popularity)
+
+Both are normalized to keep the weighting fair, then combined into a single score.
+Duplicates are removed so one title doesn’t appear multiple times.
+""")
         st.caption("Score uses normalized critic score and normalized global sales, weighted by your preferences.")
+
