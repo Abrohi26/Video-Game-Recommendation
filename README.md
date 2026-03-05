@@ -6,6 +6,8 @@ A portfolio project that recommends and ranks video games based on user preferen
 - Streamlit App: https://lnkd.in/gXCQQQcd
 
 - <img width="1923" height="854" alt="Video Games Recommendation" src="https://github.com/user-attachments/assets/11c473f7-ccd8-43fc-b2cb-3567da609eae" />
+- <img width="1922" height="867" alt="VG 2" src="https://github.com/user-attachments/assets/34a3d45d-c904-4c7e-a87c-5d2f73ffe9ad" />
+<img width="1928" height="802" alt="BG 3" src="https://github.com/user-attachments/assets/1e579b6c-4682-42f6-beae-ba744d54d87d" />
 
 
 ## Problem
@@ -20,8 +22,6 @@ Key fields used:
 - `year_of_release` — release year
 - `critic_score` — review score (quality signal)
 - `global_sales` — worldwide sales (popularity signal)
-
-- <img width="1922" height="867" alt="VG 2" src="https://github.com/user-attachments/assets/34a3d45d-c904-4c7e-a87c-5d2f73ffe9ad" />
 
 
 ## How Recommendations Work
@@ -54,8 +54,6 @@ Duplicates are removed by title so a single game doesn’t flood results across 
 - `notebooks/` — Python EDA notebook (optional but recommended)
 
 ## What I’d Improve Next
-
-<img width="1928" height="802" alt="BG 3" src="https://github.com/user-attachments/assets/1e579b6c-4682-42f6-beae-ba744d54d87d" />
 
 - Add user-driven weight sliders (instead of checkboxes)
 - Add platform-friendly mapping (PS4 → PlayStation 4, etc.)
