@@ -1,64 +1,76 @@
-# 🎮 Video Game Recommendation Engine (Streamlit)
+# 🎮 Video Game Recommendation Engine
 
-A portfolio project that recommends and ranks video games based on user preferences using a weighted scoring model (critic score + global sales). Deployed as a Streamlit web app for easy sharing with recruiters/hiring managers.
+A weighted ranking engine that helps users discover high-quality video games based on personal preferences — built with PostgreSQL, Python, and deployed as an interactive Streamlit web app.
 
-## Live Demo
-- Streamlit App: https://lnkd.in/gXCQQQcd
+**[▶ Try the Live App](https://lnkd.in/gXCQQQcd)**
 
-- <img width="1923" height="854" alt="Video Games Recommendation" src="https://github.com/user-attachments/assets/11c473f7-ccd8-43fc-b2cb-3567da609eae" />
-- <img width="1922" height="867" alt="VG 2" src="https://github.com/user-attachments/assets/34a3d45d-c904-4c7e-a87c-5d2f73ffe9ad" />
-<img width="1928" height="802" alt="BG 3" src="https://github.com/user-attachments/assets/1e579b6c-4682-42f6-beae-ba744d54d87d" />
+---
 
+## Screenshots
+
+![App Overview](https://private-user-images.githubusercontent.com/173987974/559002515-11c473f7-ccd8-43fc-b2cb-3567da609eae.PNG)
+
+![Filtered Results](https://private-user-images.githubusercontent.com/173987974/559002553-34a3d45d-c904-4c7e-a87c-5d2f73ffe9ad.PNG)
+
+![Scoring in Action](https://private-user-images.githubusercontent.com/173987974/559002607-1e579b6c-4682-42f6-beae-ba744d54d87d.PNG)
+
+---
 
 ## Problem
-With thousands of games across platforms and genres, it’s hard for a player to quickly find high-quality options that match their preferences. This app helps narrow choices and provides explainable ranked results.
 
-## Data
-Source dataset: (Kaggle / name if you want)
-Key fields used:
-- `name` — game title
-- `platform` — console/PC
-- `genre` — primary genre
-- `year_of_release` — release year
-- `critic_score` — review score (quality signal)
-- `global_sales` — worldwide sales (popularity signal)
+With thousands of games across platforms and genres, players struggle to quickly identify high-quality titles that match their preferences. This app filters and ranks games using explainable, user-controlled scoring — giving clear, justified recommendations rather than a black-box result.
 
+---
 
-## How Recommendations Work
-The app filters the dataset based on:
-- Platform (Wii / X360 / PS4 / PC)
-- Genre (optional)
-- Newer vs older games (cutoff at 2010)
+## How It Works
 
-Then it ranks the remaining games using a weighted score:
+The app filters the dataset by platform, genre, and release era, then scores results using a normalized weighted formula:
 
-**Score = w1 * normalized(critic_score) + w2 * normalized(global_sales)**
+**Score = w1 × normalized(critic_score) + w2 × normalized(global_sales)**
 
-Where:
-- If “Critic reviews matter” is checked → critic weight increases
-- If “Sales matter” is checked → sales weight increases
+- Users control weighting via checkboxes ("Critic reviews matter" / "Sales matter")
 - Normalization prevents either metric from dominating due to scale differences
+- Duplicate titles are deduplicated across platforms so one game doesn't flood results
 
-Duplicates are removed by title so a single game doesn’t flood results across platforms.
+---
 
 ## Tech Stack
-- Python, Pandas (data filtering + scoring)
-- Streamlit (UI + deployment)
-- PostgreSQL / pgAdmin (original SQL exploration + cleaning workflow)
-- GitHub + Streamlit Community Cloud (deployment)
+
+| Layer | Tools |
+|-------|-------|
+| Data exploration & cleaning | PostgreSQL, pgAdmin |
+| App logic | Python, Pandas |
+| Frontend & deployment | Streamlit, Streamlit Community Cloud |
+| Version control | GitHub |
+
+---
+
+## Data
+
+**Source:** Kaggle — Video Game Sales dataset (16,598 games)
+
+Key fields: `name`, `platform`, `genre`, `year_of_release`, `critic_score`, `global_sales`
+
+---
 
 ## Repository Structure
-- `streamlit_app.py` — Streamlit UI + recommendation logic
-- `data/games.csv` — cleaned dataset snapshot for deployment
-- `sql/` — SQL scripts used for exploration/cleaning (optional but recommended)
-- `notebooks/` — Python EDA notebook (optional but recommended)
+```
+├── streamlit_app.py   # App logic and UI
+├── data/games.csv     # Cleaned dataset
+└── sql/               # PostgreSQL scripts for EDA and cleaning
+```
 
-## What I’d Improve Next
+---
 
-- Add user-driven weight sliders (instead of checkboxes)
-- Add platform-friendly mapping (PS4 → PlayStation 4, etc.)
-- Add “similar games” recommendations using cosine similarity on genres + scores
-- Add visuals: top genres, score breakdown per result
+## What I'd Improve Next
+
+- Replace checkboxes with continuous sliders for finer weight control
+- Add platform-friendly display names (e.g. X360 → Xbox 360)
+- Implement "similar games" feature using cosine similarity on genre + score vectors
+- Add visualizations: genre distribution, score breakdown charts
+
+---
 
 ## Author
-Amir Brohi (GitHub: Abrohi26)
+
+**Amir Brohi** · [LinkedIn](https://www.linkedin.com/in/amirbrohi/) · [GitHub](https://github.com/Abrohi26)
