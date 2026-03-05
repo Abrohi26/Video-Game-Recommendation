@@ -48,6 +48,8 @@ Duplicates are removed by title so a single game doesn’t flood results across 
 - `notebooks/` — Python EDA notebook (optional but recommended)
 
 ## What I’d Improve Next
+<img width="1923" height="854" alt="Video Games Recommendation" src="https://github.com/user-attachments/assets/d5725da1-4dff-4422-b05a-20e967cc4676" />
+
 - Add user-driven weight sliders (instead of checkboxes)
 - Add platform-friendly mapping (PS4 → PlayStation 4, etc.)
 - Add “similar games” recommendations using cosine similarity on genres + scores
