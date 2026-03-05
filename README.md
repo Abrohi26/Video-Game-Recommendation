@@ -7,12 +7,9 @@ A weighted ranking engine that helps users discover high-quality video games bas
 ---
 
 ## Screenshots
-
-![App Overview](https://private-user-images.githubusercontent.com/173987974/559002515-11c473f7-ccd8-43fc-b2cb-3567da609eae.PNG)
-
-![Filtered Results](https://private-user-images.githubusercontent.com/173987974/559002553-34a3d45d-c904-4c7e-a87c-5d2f73ffe9ad.PNG)
-
-![Scoring in Action](https://private-user-images.githubusercontent.com/173987974/559002607-1e579b6c-4682-42f6-beae-ba744d54d87d.PNG)
+<img width="1923" height="854" alt="Video Games Recommendation" src="https://github.com/user-attachments/assets/54cf5f04-822c-48e9-81b3-1e40ae251444" />
+<img width="1922" height="867" alt="VG 2" src="https://github.com/user-attachments/assets/e51c69d3-d2af-412d-8592-3ef3e32dbc15" />
+<img width="1928" height="802" alt="BG 3" src="https://github.com/user-attachments/assets/8b808d27-500a-4e76-978b-6551165e7a9e" />
 
 ---
 
