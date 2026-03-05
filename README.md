@@ -3,7 +3,7 @@
 A portfolio project that recommends and ranks video games based on user preferences using a weighted scoring model (critic score + global sales). Deployed as a Streamlit web app for easy sharing with recruiters/hiring managers.
 
 ## Live Demo
-- Streamlit App: (paste your Streamlit URL here)
+- Streamlit App: https://lnkd.in/gXCQQQcd
 
 ## Problem
 With thousands of games across platforms and genres, it’s hard for a player to quickly find high-quality options that match their preferences. This app helps narrow choices and provides explainable ranked results.
